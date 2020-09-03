@@ -3,33 +3,48 @@
     <head>
         <meta charset="utf-8">
 
-        <title>CIDR.xyz</title>
+        <title>CIDRv6.xyz</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="all">
-        <meta name="keywords" content="cidr, ip address, range, netmask, visualizer">
-        <meta name="description" content="Interactive IP address and CIDR range visualizer">
+        <meta name="keywords" content="cidr, ip address, IPv6, range, netmask, visualizer">
+        <meta name="description" content="Interactive IPv6 address and CIDR range visualizer">
+	<meta name="author" content="Andrew Savchyn">
         <meta name="author" content="Yuval Adam">
 
-        <link rel="canonical" href="https://cidr.xyz">
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-71263113-1', 'auto');
-            ga('send', 'pageview');
-        </script>
+        <link rel="canonical" href="https://cidrv6.xyz">
     </head>
     <body>
         <header>
-            <h1>CIDR.xyz<small>An interactive IP address and CIDR range visualizer</small></h1>
-            <p><a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a> is a notation for describing blocks of IP addresses and is used heavily in various networking configurations. IP addresses contain 4 octets, each consisting of 8 bits giving values between 0 and 255. The decimal value that comes after the slash is the number of bits consisting of the routing prefix. This in turn can be translated into a netmask, and also designates how many available addresses are in the block.</p>
+            <h1>CIDRv6.xyz<small>An interactive IPv6 address and CIDR range visualizer</small></h1>
+            <p><a target="_blank" href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">CIDR</a> is a notation for describing blocks of IP addresses and is used heavily in various networking configurations. IPv6 addresses contain 8 groups of 16 bits each (sometimes called hextets or quibbles) giving values between 0 and 65535 . The decimal value that comes after the slash is the number of bits consisting of the routing prefix. This in turn can be translated into a netmask, and also designates how many available addresses are in the block.</p>
         </header>
         <section id="app"></section>
         <footer>
-            Created by <a href="https://yuv.al">Yuval Adam</a>. Source available on <a href="https://github.com/yuvadm/cidr.xyz">Github</a>.
+	  <div>Created by <a href="https://scorpil.com">Andrew Savchyn</a>. Source available on <a href="https://github.com/scorpil/cidrv6.xyz">Github</a>.</div>
+          <div>Forked from <a href="https://cidr.xyz">cidr.xyz</a> by <a href="https://yuv.al">Yuval Adam</a>. Source available on <a href="https://github.com/yuvadm/cidr.xyz">Github</a>.</div>
         </footer>
+	<script>
+	      try {
+		BigInt(0);
+	      } catch(err) {
+		alert("Unfortunately, your browser doesn't support BigInt. This site won't work :(");
+	      }
+	</script>
+	<script type='text/javascript'>
+	  var Countly = Countly || {};
+	  Countly.q = Countly.q || [];
+	  Countly.app_key = "67956f88a8d567e7660682d7173e06c667f8a142";
+	  Countly.url = "https://t.cidrv6.xyz"; 
+	  Countly.q.push(['track_sessions']);
+	  Countly.q.push(['track_pageview']);
+	  (function() {
+	    var cly = document.createElement('script'); cly.type = 'text/javascript'; 
+	    cly.async = true;
+	    cly.src = 'https://t.cidrv6.xyz/sdk/web/countly.min.js';
+	    cly.onload = function(){Countly.init()};
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+	  })();
+	</script>
     </body>
 </html>

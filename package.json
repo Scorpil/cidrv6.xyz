@@ -1,31 +1,31 @@
 {
-  "name": "cidr.xyz",
-  "version": "1.0.0",
-  "description": "Web-based CIDR / netmask / IP address visualizer",
+  "name": "cidrv6.xyz",
+  "version": "2.0.1",
+  "description": "Web-based CIDR / netmask / IPv6 address visualizer",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --mode development",
     "build": "webpack --mode production"
   },
-  "author": "",
+  "author": "Andrew Savchyn",
   "license": "ISC",
   "devDependencies": {
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.1.0"
-  },
-  "dependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^3.2.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "netmask": "^1.0.6",
+    "@babel/core": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "babel-preset-latest-node": "^4.1.0",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "css-loader": "^4.2.2",
+    "html-loader": "^1.3.0",
+    "html-webpack-plugin": "^4.4.1",
+    "netmask6": "^0.0.3",
     "node-sass": "^4.12.0",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
-    "sass-loader": "^8.0.0",
+    "sass-loader": "^10.0.1",
     "style-loader": "^1.0.0",
     "webpack-dev-server": "^3.8.1"
   }

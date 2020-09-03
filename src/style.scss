@@ -1,13 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono');
 
-$color_a: #a101a6;
-$color_b: #d9005b;
-$color_c: #84e900;
-$color_d: #cff700;
-$color_e: #aaa;
+$color_a: #a05195;
+$color_b: #3f9b7c;
+$color_c: #ff7c43;
+$color_d: #909f5c;
+$color_e: #ffa600;
+$color_f: #d45087;
+$color_g: #665191;
+$color_h: #f95d6a;
+$color_i: #aab;
 $octet_lighten: 15%;
 
 body {
+    a {
+	color: #667;
+    }
   background: #eee;
   font-family: 'Ubuntu', sans-serif;
   header {
@@ -31,7 +38,7 @@ body {
     text-align: center;
     font-family: 'Ubuntu Mono', monospace;
     div {
-      margin-top: 65px;
+      margin-top: 15px;
     }
     div.address {
       input {
@@ -41,27 +48,39 @@ body {
         border: 0px;
         border-radius: 3px;
       }
-      span.octet {
+      span.hextet {
         span.dot {
           font-size: 2.7em;
           text-align: center;
           padding: 0.1em 0.13em;
         }
-        &:nth-child(1) input.octet {
+        &:nth-child(1) input.hextet {
           background-color: $color_a;
         }
-        &:nth-child(2) input.octet {
+        &:nth-child(2) input.hextet {
           background-color: $color_b;
         }
-        &:nth-child(3) input.octet {
+        &:nth-child(3) input.hextet {
           background-color: $color_c;
         }
-        &:nth-child(4) input.octet {
+        &:nth-child(4) input.hextet {
           background-color: $color_d;
+        }
+	&:nth-child(5) input.hextet {
+          background-color: $color_e;
+        }
+        &:nth-child(6) input.hextet {
+          background-color: $color_f;
+        }
+        &:nth-child(7) input.hextet {
+          background-color: $color_g;
+        }
+        &:nth-child(8) input.hextet {
+          background-color: $color_h;
         }
       }
       input.cidr {
-        background-color: $color_e;
+        background-color: $color_i;
       }
     }
     div.bits {
@@ -79,44 +98,54 @@ body {
               border: 1px black solid;
             }
           }
+	}
+	div {
+	    display: flex;
+	    flex-wrap: wrap;
+	    justify-content: center;
+	    line-height: 35px;
           &:nth-child(1) ol li.bit.unmasked {
-            background-color: lighten($color_a, $octet_lighten);
+              background-color: $color_a;
           }
-          &:nth-child(2) ol li.bit.unmasked {
-            background-color: lighten($color_b, $octet_lighten);
+	  &:nth-child(2) ol li.bit.unmasked {
+              background-color: $color_b;
           }
-          &:nth-child(3) ol li.bit.unmasked {
-            background-color: lighten($color_c, $octet_lighten);
-          }
-          &:nth-child(4) ol li.bit.unmasked {
-            background-color: lighten($color_d, $octet_lighten);
-          }
+	  &:nth-child(3) ol li.bit.unmasked {
+              background-color: $color_c;
+	  }
+	  &:nth-child(4) ol li.bit.unmasked {
+              background-color: $color_d;
+	  }
+	  &:nth-child(5) ol li.bit.unmasked {
+              background-color: $color_e;
+	  }
+	  &:nth-child(6) ol li.bit.unmasked {
+              background-color: $color_f;
+	  }
+	  &:nth-child(7) ol li.bit.unmasked {
+              background-color: $color_g;
+	  }
+	  &:nth-child(8) ol li.bit.unmasked {
+              background-color: $color_h;
+	  }
           ol li.bit.masked {
-            background-color: lighten($color_e, $octet_lighten);
-            color: lighten($color_e, 22%);
+              background-color: lighten($color_i, $octet_lighten);
+              color: lighten($color_i, 22%);
           }
         }
       }
     }
     div.details {
-      span.netmask {
-        display: inline-block;
-        width: 20%;
-      }
-      span.first {
-        display: inline-block;
-        width: 20%;
-      }
-      span.last {
-        display: inline-block;
-        width: 20%;
-      }
-      span.count {
-        display: inline-block;
-        width: 20%;
-      }
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+
+	div.cell {
+	    flex: 1 1 0px
+	}
       span.value {
-        font-size: modular-scale(1);
+          font-size: modular-scale(1);
+	  overflow-wrap: anywhere;
       }
       span.label {
         display: block;
@@ -130,8 +159,12 @@ body {
   }
 
   footer {
-    margin-top: 50px;
-    text-align: center;
-    font-size: modular-scale(-1);
+      margin-top: 50px;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: #999;
   }
 }

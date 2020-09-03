@@ -6,7 +6,13 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
+	  options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+	    plugins: [
+	      "@babel/plugin-proposal-class-properties"
+	    ]
+          }
         }
       },
       {
@@ -35,6 +41,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
+      favicon: "./src/favicon-32x32.png",
       template: './src/index.html',
       filename: './index.html'
     })

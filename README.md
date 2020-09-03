@@ -1,8 +1,8 @@
 # cidr.xyz
 
-**Web-based CIDR / netmask / IP address visualizer - https://cidr.xyz**
+**Web-based CIDR / netmask / IPv6 address visualizer - https://cidrv6.xyz**
 
-[![cidr.png](cidr.png)](https://cidr.xyz)
+[![cidr.png](cidr.png)](https://cidrv6.xyz)
 
 ## Dev
 
@@ -23,4 +23,4 @@ $ yarn run build
 
 ## Deployment
 
-Deployment is automated from `master` branch via Netlify
+Deployment is automated from `master` branch to AWS S3 / CloudFront.
