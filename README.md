@@ -1,4 +1,4 @@
-# cidr.xyz
+# cidrv6.xyz
 
 **Web-based CIDR / netmask / IPv6 address visualizer - https://cidrv6.xyz**
 
