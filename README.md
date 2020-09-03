@@ -24,3 +24,5 @@ $ yarn run build
 ## Deployment
 
 Deployment is automated from `master` branch to AWS S3 / CloudFront.
+
+This repository is a fork of [yuvadm/cidr.xyz](https://github.com/yuvadm/cidr.xyz).
