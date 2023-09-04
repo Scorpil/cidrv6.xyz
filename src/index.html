@@ -32,19 +32,20 @@
 	      }
 	</script>
 	<script type='text/javascript'>
-	  var Countly = Countly || {};
-	  Countly.q = Countly.q || [];
-	  Countly.app_key = "67956f88a8d567e7660682d7173e06c667f8a142";
-	  Countly.url = "https://t.cidrv6.xyz"; 
-	  Countly.q.push(['track_sessions']);
-	  Countly.q.push(['track_pageview']);
-	  (function() {
-	    var cly = document.createElement('script'); cly.type = 'text/javascript'; 
-	    cly.async = true;
-	    cly.src = 'https://t.cidrv6.xyz/sdk/web/countly.min.js';
-	    cly.onload = function(){Countly.init()};
-	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
-	  })();
+		var Countly = Countly || {};
+		Countly.q = Countly.q || [];
+		Countly.app_key = 'a5b9e78a1f506a5cc71227c77ec3cbdb7eee7b20';
+		Countly.url = 'https://countly.scorpil.com';
+		Countly.q.push(['track_sessions']);
+		Countly.q.push(['track_pageview']);
+		Countly.q.push(['track_errors']);
+		(function() {
+			var cly = document.createElement('script'); cly.type = 'text/javascript';
+			cly.async = true;
+			cly.src = 'https://countly.scorpil.com/sdk/web/countly.min.js';
+			cly.onload = function(){Countly.init()};
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+		})();
 	</script>
     </body>
 </html>
